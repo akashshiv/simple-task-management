@@ -2,7 +2,7 @@
      session_start();
 
 $dbopts = parse_url(getenv('DATABASE_URL'));
-$app->register(new Csanquer\Silex\PdoServiceProvider\Provider\PDOServiceProvider('pdo'),
+$conn->register(new Csanquer\Silex\PdoServiceProvider\Provider\PDOServiceProvider('pdo'),
                array(
                 'pdo.server' => array(
                    'driver'   => 'pgsql',
@@ -17,7 +17,7 @@ $app->register(new Csanquer\Silex\PdoServiceProvider\Provider\PDOServiceProvider
 
 
    try {
-   	  $conn = new PDO("mysql:host=$server;dbname=$db;",$username,$password);
+   	 
    } catch (PDOException $e) {
    	  die("connection errror".$e->getMessage());
    }
