@@ -1,12 +1,17 @@
 <?php
      session_start();
-   $database = 'assignment';
-   $servername ='localhost';
-   $password ='foo.bar';
-   $username ='root';
-    
+
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+
+
    try {
-   	  $conn = new PDO("mysql:host=$servername;dbname=$database;",$username,$password);
+   	  $conn = new PDO("mysql:host=$server;dbname=$db;",$username,$password);
    } catch (PDOException $e) {
    	  die("connection errror".$e->getMessage());
    }
