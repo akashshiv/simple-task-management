@@ -1,13 +1,19 @@
 <?php
      session_start();
 
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-$server = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$db = substr($url["path"], "assignment.php");
-
+$dbopts = parse_url(getenv('DATABASE_URL'));
+$app->register(new Csanquer\Silex\PdoServiceProvider\Provider\PDOServiceProvider('pdo'),
+               array(
+                'pdo.server' => array(
+                   'driver'   => 'pgsql',
+                   'user' => $dbopts["user"],
+                   'password' => $dbopts["pass"],
+                   'host' => $dbopts["host"],
+                   'port' => $dbopts["port"],
+                   'dbname' => ltrim($dbopts["path"],'assignment.sql')
+                   )
+               )
+);
 
 
    try {
