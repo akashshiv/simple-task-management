@@ -2,7 +2,7 @@
   require "connection.php";
   require "function.php";  
  if (is_loggedin() === true) {
-  header("location:home.php");
+  header("location:index.php");
   exit();
 }
   
@@ -23,7 +23,7 @@ if (isset($_POST['sub'])) {
             {
                 $_SESSION['username'] = $result['username'];
              
-               header('location:home.php');
+               header('location:index.php');
             }
         }else{
          echo "all feild are mendetory";
