@@ -1,0 +1,59 @@
+#menu{
+	
+	height: 50px;
+	border:1px solid black;
+	background-color:black;
+	position: fixed;
+	top:0px;
+    padding: .2px;
+    padding-bottom: 1px;
+	width: 100%;
+}
+#menu ul{
+	float: right;
+
+}
+#menu  ul  li {
+	float: left;
+	list-style: none;
+	padding: 5px;
+	margin-left: 50px;
+	margin-right: 40px;
+}
+#menu li a{
+	text-decoration: none;
+	color: #fff;
+}
+#menu ul a:hover{
+    padding-top:7px;
+	padding-bottom: 7px;
+	border-radius: 5px;
+	color: #fff;
+	background-color:white;
+	color: blue;
+	transition: all .3s ease-in-out;
+}
+#task{
+	width:600px;
+	height: 180px;
+	border:1px solid black;
+	margin-top: 200px;
+}
+#task input[type="text"]{
+	float: left;
+	margin-top: 20px;
+	margin-left: 40px;
+	width: 130px;
+	padding: 5px;
+	border-color: black;
+}
+#task input[type="submit"]{
+	background-color: black;
+	color: white;
+	border-color: black;
+	padding: 4px;
+	margin-top: 50px;
+	width: 100px;
+	font-size: 20px;
+	height: 40px;
+}
