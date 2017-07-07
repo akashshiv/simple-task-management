@@ -44,7 +44,7 @@ if (is_loggedin() === false) {
 <body>
         <div id ="menu"> 
         <ul>
-            <li><a href="home.php">HOME</a></li>
+            <li><a href="index.php">HOME</a></li>
             <li><a href="newtask.php">TASK</a></li>
             <li><a href="addtask.php"> ADD TASK</a></li> 
             <li> <a href="edittask.php">EDIT TASK</a> </li>
