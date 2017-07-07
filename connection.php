@@ -10,7 +10,7 @@ $db = substr($url["path"], assignment.sql);
 
 
    try {
-   	 $conn = new PDO("mysql:host=$servername;dbname=$database;",$username,$password);
+   	 $conn = new PDO("mysql:host=$server;dbname=$db;",$username,$password);
    } catch (PDOException $e) {
    	  die("connection errror".$e->getMessage());
    }
